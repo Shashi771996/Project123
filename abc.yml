@@ -1,0 +1,14 @@
+---
+ - name: playbook for ansible centos latest images
+   hosts: all
+   tasks:
+          -name: build docker latest:images
+           state: pesent
+           docker_images:
+                   name: image:latest
+                   build:
+                        path: /root/Project123/Dockerfile
+                        source: build 
+                   state: present
+
+
